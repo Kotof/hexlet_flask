@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		<h1>Шкалики</h1>
+		<ul>
+		{% for bottle in range(number_of_bottles, -1, -1) %}
+			{% if bottle > 0 %}
+		  		<li>{{ bottle }} bottles of something stood on the table, one fell and crashed.</li>
+			{% else %}
+				<li>No more bottles on the table.</li>
+			{% endif %}
+		{% endfor %}
+		</ul>
+	</body>
+</html>

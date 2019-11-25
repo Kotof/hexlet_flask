@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1">
+	<colgroup>
+		<col style="background-color:#DCC48E; width:62px;">
+	    <col style="background-color:#97DB9A; width:62px;">
+	    <!-- <col style="background-color:#DCC01E; width:42px;"> -->
+	</colgroup>
+<!-- 		<tr>
+			{% for k, v in test %}
+			<th>{{ k }}</th>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for k, v in test1 %}
+			<td>{{ v }}</td>
+			{% endfor %}
+		</tr> -->
+		<tr>
+	        <th>Key</th>
+	        <th>Value</th>
+	    </tr>
+    {% for (k, vs) in rows %}
+		<tr>
+			<td>{{ k }}</td>
+			<td>
+			{% for v in vs %}
+			  {{ v }}
+			  {% if not loop.last %}
+			  ,
+			  {% endif %}
+			{% endfor %}
+		</td>
+      </tr>
+    {% endfor %}
+	</table>
+</body>
+</html>
